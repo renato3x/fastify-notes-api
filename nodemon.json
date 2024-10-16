@@ -1,0 +1,8 @@
+{
+  "watch": ["src"],
+  "exec": "babel-node src/index",
+  "ignore": ["node_modules"],
+  "events": {
+    "start": "clear"
+  }
+}
