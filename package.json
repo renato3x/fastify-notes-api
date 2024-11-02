@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "nodemon",
     "build": "babel src --extensions \".js\" --out-dir dist --copy-files --no-copy-ignored --no-comments",
-    "start": "node dist/index"
+    "start": "yarn prisma generate && yarn prisma migrate deploy && node dist/index"
   },
   "dependencies": {
     "@babel/node": "^7.25.7",
     "@fastify/cors": "^10.0.1",
     "@prisma/client": "5.21.0",
+    "dotenv": "^16.4.5",
     "fastify": "^5.0.0",
     "pino-pretty": "^11.3.0"
   },
